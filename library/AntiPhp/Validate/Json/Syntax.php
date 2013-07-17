@@ -21,7 +21,7 @@ class Syntax extends ValidateAbstract implements ValidateInterface
         $isValid = $json !== null;
         if (!$isValid) {
             $jsonLastError = json_last_error();
-            foreach (array('JSON_ERROR_CTRL_CHAR', 'JSON_ERROR_DEPTH', 'JSON_ERROR_STATE_MISMATCH', 'JSON_ERROR_SYNTAX', 'JSON_ERROR_UTF8', 'JSON_ERROR_NONE') as $jsonErrorConstant) {
+            foreach (array('JSON_ERROR_CTRL_CHAR', 'JSON_ERROR_DEPTH', 'JSON_ERROR_STATE_MISMATCH', 'JSON_ERROR_SYNTAX', 'JSON_ERROR_UTF8') as $jsonErrorConstant) {
                 if (!defined($jsonErrorConstant)) {
                     continue;
                 }

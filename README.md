@@ -26,9 +26,6 @@ Extend your composer.json like this:
 		"require": {
 			"php": ">=5.3.2",
 			"antiphp/minusl": "dev-master"
-		},
-		"autoload": {
-			"classmap": ["vendor"]
 		}
 	}
 

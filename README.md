@@ -43,9 +43,33 @@ Tests
 	
 	// extended syntax
 	php vendor/antiphp/minusl/bin/minusl.php --hash=md5 --cache-file=/path/to/your/project/tmp/minusl.json --auto-save-interval=80 run /path/to/your/project
-	
-	
 
+	
+Output
+------
+	
+	PHP MinusL (-l) Cached syntax checker by Christian Reinecke
+
+	/home/www/minusl
+	..E.............................................................................
+	........................................................
+
+	Error summary (1):
+		[01] Errors parsing /home/www/minusl/latest/test.php
+
+	General summary:
+		files.................... 221
+		files ignored............ 85
+		files checked............ 136
+		files *.json............. 20
+		files *.php.............. 101
+		files *.xml.............. 15
+		files valid.............. 1
+		files valid from cache... 134
+		files invalid............ 1
+		saved time............... 10.01s
+
+	Fail.
 
 	
 Warning

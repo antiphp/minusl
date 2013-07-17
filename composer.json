@@ -3,6 +3,7 @@
     "type": "library",
     "description": "PHP MinusL (-l) Cached syntax checker",
     "keywords": ["lint", "phplint", "syntax", "syntaxcheck", "check", "validate", "validation"],
+	"licence": "MIT",
     "authors": [
         {
             "name": "Christian Reinecke",

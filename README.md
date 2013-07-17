@@ -1,11 +1,9 @@
-AntiPhp MinusL
-==============
+AntiPhp MinusL (-l)
+===================
 
-MinusL checks the syntax of PHP, XML, JSON and INI files. At large projects this takes a lot of time,
-so the focus of this project is to remember, which files has already been checked and to check only
-new or updated files again.
+MinusL checks the syntax of PHP, XML, JSON and INI files, the result will be cached.
 
-Whether a file has changed or not is determined by the hash function (by default PHP's md5_file) but
+Whether a file has changed or not is determined by a hash function (by default PHP's md5_file) but
 you can use other functions (filemtime) or hash algorithms.
 
 Syntax check for PHP files:

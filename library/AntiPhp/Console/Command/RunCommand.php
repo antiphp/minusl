@@ -293,7 +293,11 @@ class RunCommand extends Command
      */
     protected function saveCache($filename, array $files)
     {
-        $content = json_encode($files, JSON_PRETTY_PRINT);
+        $options = 0;
+        if (defined('JSON_PRETTY_PRINT')) {
+            $options |= JSON_PRETTY_PRINT;
+        }
+        $content = json_encode($files, $options);
         file_put_contents($filename, $content);
     }
 

@@ -12,6 +12,16 @@
     ],
     "require": {
         "php": ">=5.3.2",
-        "symfony/console": "2.*"
+        "symfony/console": "2.*",
+        "ext-simplexml": "*",
+        "ext-json": "*"
+    },
+    "config": {
+        "bin-dir": "bin"
+    },
+    "autoload": {
+        "classmap": [
+            "library"
+        ]
     }
 }

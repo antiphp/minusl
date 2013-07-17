@@ -9,21 +9,38 @@
  */
 namespace AntiPhp\Validate;
 
+/**
+ * abstract class to provide error storage
+ *
+ * @author Christian Reinecke <christian.reinecke@karlsruler.de>
+ */
 abstract class ValidateAbstract
 {
+    /**
+     * @var string[]
+     */
     protected $errors = array();
 
+    /**
+     * @return boolean
+     */
     public function hasError()
     {
         return count($this->errors) > 0;
     }
 
+    /**
+     * @return string
+     */
     public function getError()
     {
         $error = implode(PHP_EOL, $this->errors);
         return $error;
     }
 
+    /**
+     * @param string $message
+     */
     protected function addError($message)
     {
         $this->errors[] = trim($message);

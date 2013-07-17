@@ -12,11 +12,20 @@ namespace AntiPhp\Validate\Xml\Syntax;
 use AntiPhp\Validate\ValidateAbstract;
 use AntiPhp\Validate\ValidateInterface;
 
+/**
+ * class to validate XML files using PHP's simplexml lib
+ *
+ * @author Christian Reinecke <christian.reinecke@karlsruler.de>
+ */
 class SimpleXml extends ValidateAbstract implements ValidateInterface
 {
+    /**
+     * (non-PHPdoc)
+     * @see \AntiPhp\Validate\ValidateInterface::isValid()
+     */
     public function isValid($filename)
     {
-        $simpleXml = @simplexml_load_file($filename); // FIXME
+        $simpleXml = @simplexml_load_file($filename); // FIXME register error handler instead
         $isValid = $simpleXml instanceof \SimpleXMLElement;
         if (!$isValid) {
             $error = libxml_get_last_error();

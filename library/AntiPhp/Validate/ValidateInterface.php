@@ -9,6 +9,11 @@
  */
 namespace AntiPhp\Validate;
 
+/**
+ * interface class
+ *
+ * @author Christian Reinecke <christian.reinecke@karlsruler.de>
+ */
 interface ValidateInterface
 {
     /**

@@ -17,6 +17,11 @@ use Symfony\Component\Console\Input\InputOption;
 
 use AntiPhp\Validate\ValidateInterface;
 
+/**
+ * command class to execute through console
+ *
+ * @author Christian Reinecke <christian.reinecke@karlsruler.de>
+ */
 class RunCommand extends Command
 {
     /**
@@ -115,6 +120,8 @@ class RunCommand extends Command
      */
     protected function execute(InputInterface $input, OutputInterface $output)
     {
+        // FIXME method is too long, delegate operations instead
+
         $output->writeln($this->getApplication()->getName());
         $directories = $input->getArgument('directory');
         $hashFunction = $this->createHashFunction($input->getOption('hash'));

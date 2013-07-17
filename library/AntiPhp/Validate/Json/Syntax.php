@@ -12,8 +12,17 @@ namespace AntiPhp\Validate\Json;
 use AntiPhp\Validate\ValidateAbstract;
 use AntiPhp\Validate\ValidateInterface;
 
+/**
+ * class to check the syntax of the provided JSON file
+ *
+ * @author Christian Reinecke <christian.reinecke@karlsruler.de>
+ */
 class Syntax extends ValidateAbstract implements ValidateInterface
 {
+    /**
+     * (non-PHPdoc)
+     * @see \AntiPhp\Validate\ValidateInterface::isValid()
+     */
     public function isValid($filename)
     {
         $content = file_get_contents($filename);

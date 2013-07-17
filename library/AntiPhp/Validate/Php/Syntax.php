@@ -12,8 +12,17 @@ namespace AntiPhp\Validate\Php;
 use AntiPhp\Validate\ValidateAbstract;
 use AntiPhp\Validate\ValidateInterface;
 
+/**
+ * class to check the syntax of a PHP file
+ *
+ * @author Christian Reinecke <christian.reinecke@karlsruler.de>
+ */
 class Syntax extends ValidateAbstract implements ValidateInterface
 {
+    /**
+     * (non-PHPdoc)
+     * @see \AntiPhp\Validate\ValidateInterface::isValid()
+     */
     public function isValid($filename)
     {
         $message = exec(

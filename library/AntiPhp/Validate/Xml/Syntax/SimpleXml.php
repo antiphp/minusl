@@ -20,8 +20,8 @@ use AntiPhp\Validate\ValidateInterface;
 class SimpleXml extends ValidateAbstract implements ValidateInterface
 {
     /**
-     * (non-PHPdoc)
-     * @see \AntiPhp\Validate\ValidateInterface::isValid()
+     * @param string $filename
+     * @return bool
      */
     public function isValid($filename)
     {

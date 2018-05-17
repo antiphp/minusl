@@ -115,8 +115,9 @@ class RunCommand extends Command
     }
 
     /**
-     * (non-PHPdoc)
-     * @see \Symfony\Component\Console\Command\Command::execute()
+     * @param InputInterface $input
+     * @param OutputInterface $output
+     * @return int|null
      */
     protected function execute(InputInterface $input, OutputInterface $output)
     {
@@ -320,8 +321,8 @@ class RunCommand extends Command
     }
 
     /**
-     * @param string $extension
-     * @return \AntiPhp\Console\Command\ValidateInterface
+     * @param $extension
+     * @return ValidateInterface|null
      */
     protected function getValidatorByExtension($extension)
     {

@@ -130,7 +130,6 @@ class RunCommand extends Command
         $files = $this->loadCache($cacheFilename);
         $autoSave = 0;
         $autoSaveInterval = max(0, $input->getOption('auto-save-interval'));
-        $verbose = $input->getOption('verbose');
         $totalSavedTime = 0.0;
         $errors = array();
         $countFiles = 0;

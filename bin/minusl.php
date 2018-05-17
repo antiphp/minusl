@@ -24,10 +24,10 @@ define('MINUSL_APPLICATION_NAME', 'PHP MinusL (-l) Cached syntax checker by Chri
 /**
  * @var string application's version
  */
-define('MINUSL_APPLICATION_VERSION', '0.0.1-alpha');
+define('MINUSL_APPLICATION_VERSION', '1.0.0');
 
 try {
-    $autoloadFilename =  __DIR__ . '/../../../autoload.php';
+    $autoloadFilename =  __DIR__ . '/../vendor/autoload.php';
     if (!file_exists($autoloadFilename)) {
         throw new RuntimeException($autoloadFilename . ' not found for autoloading, please run \'php composer.phar dump-autoload\' first');
     }

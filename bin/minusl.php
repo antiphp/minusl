@@ -8,6 +8,7 @@
  * @date $Date$
  * @version $Rev$
  */
+
 use Symfony\Component\Console\Input\InputArgument;
 use Symfony\Component\Console\Application;
 use AntiPhp\Console\Command\RunCommand;
@@ -27,10 +28,11 @@ define('MINUSL_APPLICATION_NAME', 'PHP MinusL (-l) Cached syntax checker by Chri
 define('MINUSL_APPLICATION_VERSION', '1.0.0');
 
 try {
-    $autoloadFilename =  __DIR__ . '/../vendor/autoload.php';
+    $autoloadFilename = __DIR__ . '/../vendor/autoload.php';
     if (!file_exists($autoloadFilename)) {
         throw new RuntimeException($autoloadFilename . ' not found for autoloading, please run \'php composer.phar dump-autoload\' first');
     }
+    /** @noinspection PhpIncludeInspection */
     require $autoloadFilename;
 
     // setup the run command
